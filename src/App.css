@@ -1,7 +1,103 @@
-.App {
-  text-align: center;
+h1{
+  margin:0;
 }
 
+nav, main{
+  max-width: 900px;
+  padding: 15px;
+  margin: auto;
+}
+
+body{
+  font-family: Helvetica, sans-serif;
+  background-color: azure;
+  margin: 0;
+}
+
+header{
+  background-color: black;
+  color:azure;
+  width: 100%;
+  justify-content: center;
+  /* padding: 20px; */
+  display: flex;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  width:900px;
+  flex-wrap: wrap;
+}
+
+nav h1{
+  padding: 5px;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul{
+  margin-block: 0;
+  padding: 5px;
+  list-style-type: none;
+}
+
+nav li{
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+
+@media only screen and (max-width: 600px){
+  #aboutMeContainer{
+      flex-direction: column;
+  }
+}
+
+/* main{
+  display: flex;
+} */
+
+#aboutMeContainer{
+  display:flex;
+}
+
+.projectImg{
+  width: 100%;
+  height: auto;
+}
+
+#profile{
+  display:flex;
+  width:300px;
+  height:300px;
+  float:right;
+  border-radius: 100px;
+  margin: 5px;
+}
+
+details img, article{
+  margin: 10px;
+}
+
+#skillsContainer i{
+  margin:5px;
+}
+
+main li{
+  margin: 3px;
+}
+
+/* .App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+} */
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,4 +132,4 @@
   100% {
     transform: translateY(0px);
   }
-}
+} */
