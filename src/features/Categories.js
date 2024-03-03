@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 export function Categories () {
     return(
         <div className="cat-banner"><div className='cat-content'>
-            <h3>Tools</h3>
-            <h3>Paint</h3>
-            <h3>Pipes</h3>
-            <h3>Outdoor</h3>
+            <h3><NavLink to="/products?category=Tools">Tools</NavLink></h3>
+            <h3><NavLink to="/products?category=Paint">Paint</NavLink></h3>
+            <h3><NavLink to="/products?category=Pipes">Pipes</NavLink></h3>
+            <h3><NavLink to="/products?category=Outdoor">Outdoor</NavLink></h3>
         </div></div>
     )
 }

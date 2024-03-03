@@ -1,6 +1,4 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { Action } from '@remix-run/router';
-import { useSelector } from 'react-redux';
 
 //REDUCERS
 // const counterReducer = (state = 0, action) => {
@@ -25,9 +23,19 @@ const usernameReducer = (state = '', action) => {
   }
 }
 
+const productsReducer = (state = [], action) => {
+  switch(action.type){
+    case 'PRODUCTS':
+      return action.payload
+    default:
+      return state;
+  }
+}
+
 //COMBINED REDUCERS
 const allReducers = combineReducers({
-  username: usernameReducer
+  username: usernameReducer,
+  products: productsReducer
 });
 
 //STORE

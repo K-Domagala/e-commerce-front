@@ -2,10 +2,15 @@ h1{
   margin:0;
 }
 
-nav, main{
+#main{
   max-width: 900px;
-  padding: 15px;
+  padding: 10px 0px;
   margin: auto;
+  display: flex;
+}
+
+#main-content{
+  margin: 0px 10px;
 }
 
 body{
@@ -19,21 +24,33 @@ header{
   color:azure;
   width: 100%;
   justify-content: center;
-  /* padding: 20px; */
   display: flex;
+  padding: 0;
 }
 
 nav{
+  max-width: 900px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 1.1rem;
-  width:900px;
+  width: 100%;
   flex-wrap: wrap;
+  padding: 10px 0px;
+}
+
+nav h1, input, ul{
+  margin: 5px 10px;
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 h3{
-  padding: 5px;
+  padding: 10px;
+  padding-left: 5px;
+  line-height: 18px;
 }
 
 .cat-banner{
@@ -41,26 +58,43 @@ h3{
   color:azure;
   width: 100%;
   justify-content: center;
-  /* padding: 20px; */
   display: flex;
 }
 
 .cat-content{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   font-size: 1.1rem;
   width:900px;
   flex-wrap: wrap;
-  /* padding: 5px; */
 }
 
-h3{
-  margin: 2px;
+.cat-content h3{
+  margin: 2px 5px;
+  border: 1px solid transparent;
 }
 
-nav h1{
-  padding: 5px;
+.cat-content h3:hover{
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+input{
+  position: static;
+  font-size: 15px;
+  height: 30px;
+}
+
+#search-box{
+  flex: 1;
+}
+
+button{
+  font-family: inherit;
+  height: 30px;
+  padding: 0px 10px;
+  font-size: 15px;
 }
 
 a{
@@ -70,13 +104,98 @@ a{
 
 ul{
   margin-block: 0;
-  padding: 5px;
+  padding: 0px;
   list-style-type: none;
 }
 
 li{
   float: left;
-  margin: 5px 15px 5px 0;
+  margin: 5px 15px 5px 0px;
+}
+
+.products{
+  /* width: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.product{
+  width: 180px;
+  height: fit-content;
+  padding: 10px;
+  margin: 8px;
+  /* display: flex; */
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  justify-content: left;
+  border: 1px solid black;
+}
+
+.product-image{
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: white;
+  width: 160px;
+  height: 160px;
+}
+
+.product-image img{
+  margin: 5%;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.product-name{
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.product-desc{
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  height: 45px;
+  /* text-overflow: ellipsis; */
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+
+.product-price{
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.product-add-to-cart{
+  margin-top: 10px;
+}
+
+.checkout{
+  font-size: 20px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.product-cart{
+  width: 180px;
+  height: 350px;
+  padding: 10px;
+  margin: 8px;
+  /* display: flex; */
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  justify-content: left;
+  border: 1px solid black;
+}
+
+.quantity{
+  width: 30px;
 }
 
 @media only screen and (max-width: 600px){
@@ -85,78 +204,24 @@ li{
   }
 }
 
-/* main{
-  display: flex;
-} */
-
-#aboutMeContainer{
-  display:flex;
-}
-
-.projectImg{
+.StripeElement {
+  height: 40px;
+  padding: 10px 12px;
   width: 100%;
-  height: auto;
+  color: #32325d;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
 }
-
-#profile{
-  display:flex;
-  width:300px;
-  height:300px;
-  float:right;
-  border-radius: 100px;
-  margin: 5px;
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
 }
-
-details img, article{
-  margin: 10px;
+.StripeElement--invalid {
+  border-color: #fa755a;
 }
-
-#skillsContainer i{
-  margin:5px;
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
 }
-
-main li{
-  margin: 3px;
-}
-
-/* .App {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-} */
-/*
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-} */

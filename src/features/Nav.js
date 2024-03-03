@@ -16,26 +16,28 @@ export function Nav () {
 
     const loggedIn = () => {
         if(username){
-            return <li><button><NavLink to="/profile">Profile</NavLink></button></li>
+            return <li><NavLink to="/profile"><button>Profile</button></NavLink></li>
         } else {
-            return <li><button><NavLink to="/login">Log In</NavLink></button></li>
+            return <li><NavLink to="/login"><button>Log In</button></NavLink></li>
         }
     }
 
     const cart = () => {
         if(username){
-            return <li><button>Cart</button></li>
+            return <li><NavLink to="/cart"><button>Cart</button></NavLink></li>
         } else {
-            return <li><button><NavLink to="/register">Sign Up</NavLink></button></li>
+            return <li><NavLink to="/register"><button>Sign Up</button></NavLink></li>
         }
     }
+
+    
 
     return(
         <div>
             <header>
                 <nav>
                     <h1><NavLink to='/'>NailRepair</NavLink></h1>
-                    <input type='textbox' defaultValue='Search...'></input>
+                    <input type='textbox' placeholder='Search...' id='search-box'></input>
                     <ul>
                         {user()}
                         {loggedIn()}
